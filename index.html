@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miller Boyd's Work</title>
-    <link rel="stylesheet" href="./Assets/CSS/reset.css">
     <link rel="stylesheet" href="./Assets/CSS/style.css">
 </head>
 
@@ -14,50 +13,68 @@
         <!--figure out how to get the scorll down thing to change with funny comments... should work if i have order -2,-1 so it changes periodically-->
         <h1>Miller Boyd's Portfolio</h1>
         <nav>
-            <ul>
-                <li><a href="https://github.com/Millerb7">Github</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#about">Resume</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
+            <a href="#about">About Me</a>
+            <a href="#work">Work</a>
+            <a href="#about">Resume</a>
+            <a href="#contact">Contact Me</a>
         </nav>
     </header>
 
     <main>
+        <!-- Background Image with caption -->
         <figure id="background">
             <img  src="Assets/images/ballin.jpg" alt="background image"/>
-            <h3>I was ballin ya heard</h3>
+            <h2>I was ballin ya heard</h2>
         </figure>
 
+        <!-- Content of page -->
         <div id="information">
-                <section>
-                    <h2 class="label">About Me</h2>
-                    <section class="contents">
-                        <p>I be on 10. Fuck outta here. Talm bout wisdom dog. Hubba gah dah, hab dah hab dah gah.</p>
-                        <p>Tru that homie</p>
-                    </section>
-                </section>
-                <section>
-                    <h2 class="label">Work</h2>
-                    <section class="contents">
-                        <img src="Assets/images/MicahFlurry.png"/>
-                        <img src="Assets/images/merbermerbear.png"/>
-                        <img src="Assets/images/frends.jpg"/>
-                        <img src="Assets/images/log.jpg"/>
-                    </section>
-                </section>
-            <section>
-                <h2 class="label">Contact Me</h2>
+
+            <!-- About Me Section -->
+            <section class="about">
+                <h3>About Me</h3>
                 <section class="contents">
-                    <p>
-                        <a>(972) 989-3778</a>
-                        <a href="mailto:millerjboyd@gmail.com">millerjboyd@gmail.com</a>
-                        <a href="https://github.com/Millerb7">Github</a>
-                        <a href="https://www.linkedin.com/in/miller-compsci/">LinkedIn</a>
-                    </p>
+                    <p>This is me when I was 10. I have not taken the time to actually get stock photos. So instead I grabbed pictures off of my desktop. This how it turned out, my apologies. I will do better next time haha.</p>
+                    <p>second paragraph</p>
                 </section>
             </section>
+
+            <!-- My Work Section -->
+            <section class="work">
+                <h3>Work</h3>
+                <section class="contents">
+                    <figure>
+                        <img src="Assets/images/MicahFlurry.png"/>
+                        <h4>Micah Flurry<br><span>My boy micahin prime</span></h4>
+                    </figure>
+                    <figure>
+                        <img src="Assets/images/merbermerbear.png"/>
+                        <h4>MerBear<br><span>I made this once</span></h4>
+                    </figure>
+                    <figure>
+                        <img src="Assets/images/frends.jpg"/>
+                        <h4>Frends<br><span>Me and my friends</span></h4>
+                    </figure>
+                    <figure>
+                        <img src="Assets/images/log.jpg"/>
+                        <h4>Me n Micah<br><span>Me an micah on log</span></h4>
+                    </figure>
+                </section>
+            </section>
+
+            <!-- Contact Me Section -->
+            <section class="contact">
+                <h3>Contact Me</h3>
+                <ul class="contents">
+                    <li><a href="https://www.google.com">(972) 989-3778</a></li>
+                    <li><a href="mailto:millerjboyd@gmail.com">millerjboyd@gmail.com</a></li>
+                    <li><a href="https://github.com/Millerb7">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/miller-compsci/">LinkedIn</a></li>
+                </ul>
+            </section>
+
         </div>
+
     </main>
 </body>
 </html>

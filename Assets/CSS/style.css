@@ -1,110 +1,175 @@
 * {
     font-family:'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+    border-block: none;
+}
+
+:root {
+  --first: #333232;
+  --second: #CFFFE5;
+  --third: #208AAE;
+  --fourth: #B7B7B7;
 }
 
 body {
-  background-color: #BDA8F0;
+  background-color: var(--first);
 }
 
 header {
+    padding: 15px 15px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1%;
-    background-color: #A385EA;
-    color: #fff;
+    background-color: var(--first);
     position: sticky;
-    width: 100%;
   }
   
-  h1 {
-    color: #FAFCEE;
-    font-size: 190%;
+  header h1 {
+    color: var(--second);
+    background: var(--third);
+    font-size: 4vw;
+    padding: 5px 1% 5px 6%;
+    line-height: 1;
   }
   
-  nav ul {
+  nav{
     display: flex;
-    justify-content: space-between;
-    min-width: 300px;
-    list-style: none;
+    flex-flow: row wrap;
   }
   
+  /* sets settings for navigation links on the bar */
   nav a {
-    color: #FAFCEE;
-    font-size: 20px;
-    font-weight: bold;
+    padding: 10px;
+    margin-right: 10px;
+    color: var(--second);
+    background-image: linear-gradient(280deg,var(--second) 0%,var(--second) 100%);
     text-decoration: none;
-    margin: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: bottom;
+    font-size: 1.4em;
+    transition: all .25s ease-in;
   }
   
+  /* navigation elements will transition to colored when hovered */
   nav a:hover {
-    color: #7604F1;
+    background-size: 100% 100%;
+    color: var(--third);
   }
 
+  /* This is the main photo that seperates header from the page */
   #background img {
     display: inline-block;
     position: relative;
-    height: 200px;
+    height: 400px;
     width: 100%;
   }
 
-  #background h3 {
+  /* This is the subtitle on the photo and its settings to make it work */
+  #background h2 {
     display:inline-block;
     position: absolute;
     width: 20%;
     left: 75%;
-    top: 220px;
+    top: 400px;
     text-align: center;
-    background-color: #A385EA;
-    color: #FAFCEE;
+    background-color: var(--second);
+    color: var(--third);
     border-radius: 10px;
   }
 
-  #information section{
+  /* creates a flex box to hold the left and right sections */
+  #information {
     display: flex;
     flex-flow: row wrap;
-    color: #7604F1;
+    color: var(--second);
+    width: 100%;
   }
 
-  .label {
+  /* Left side of the page, the titles of the sections */
+  #information h3 {
+    display:flex;
+    float: left;
+    justify-content: flex-end;
+    color:var(--third);
     margin: 20px;
     padding: 20px;
-    width: 200px;
-    text-align: right;
+    width: 20%;
     font-weight: normal;
+    background-color: yellow;
   }
 
+  /* Right side of the page, all of the pictures and text descriptions */
   .contents {
     display: flex;
     flex-flow: row wrap;
-    width: 60%;
-    height: auto;
-    margin: 20px;
-    padding: 20px;
-    color: #0c0e07;
-    border-left: 5px solid #7604F1;
+    margin: 1%;
+    padding: 1%;
+    width: 70%;
+    color: var(--second);
+    background-color: violet;
+    border-left: 5px solid var(--third);
   }
 
-  .contents p {
-    width: 60%;
+  .about p {
+    width:100%;
     margin: 5px;
   }
 
-  .contents img {
-    width: 40%;
-    margin: 5px;
-    border: 5px solid #FAFCEE;
-  }
-
-  .contents p a{
-    color: #7604F1;
-    text-decoration: underline;
-    flex-wrap: none;
+  .work figure {
+    width: 45%;
+    height: 200px;
     margin: 10px;
+    border: 5px solid var(--second);
+    position: relative;
   }
 
-  .contents p a:hover {
+  .work img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .work h4 {
+    position: absolute;
+    top: 110px;
+    height: 20%;
+    width: 40%;
+    text-align: center;
+    color:var(--first);
+    background-color: var(--second);
+    padding: 5px 5px;
+  }
+
+  .work span {
+    letter-spacing: -1px;
+    padding: 1px;
+  }
+
+  /* Puts space below contact section so it doesnt touch the bottom of the page */
+  .contact {
+    margin-bottom: 20px;
+  }
+
+  .contact ul {
+    line-height: 3vw;
+    list-style: none;
+  }
+
+  .contact a {
+    margin: 5px;
+    color:var(--second);
+  }
+
+
+  .contact a:hover {
     text-decoration: none;
-    color:#FAFCEE;
+    color: var(--third);
   }
 
+@media screen and (max-width: 768px) {
+  header  {
+    flex-direction: column;
+  }
+}
