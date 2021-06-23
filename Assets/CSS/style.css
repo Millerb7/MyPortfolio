@@ -14,7 +14,7 @@
   --fourth: #B7B7B7;
 }
 
-/* sets background nd gets rid of horizontal scrollbar */
+/* sets background and gets rid of horizontal scrollbar */
 body {
   background-color: var(--first);
   overflow-x:hidden;
