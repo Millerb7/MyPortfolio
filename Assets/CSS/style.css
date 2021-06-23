@@ -1,3 +1,4 @@
+/* Sets font for entire page and some necessary defaults */
 * {
     font-family:'Times New Roman', Times, serif;
     padding: 0;
@@ -5,6 +6,7 @@
     border-block: none;
 }
 
+/* This is my color palette */
 :root {
   --first: #333232;
   --second: #CFFFE5;
@@ -12,10 +14,13 @@
   --fourth: #B7B7B7;
 }
 
+/* sets background nd gets rid of horizontal scrollbar */
 body {
   background-color: var(--first);
+  overflow-x:hidden;
 }
 
+/* This sets up the top header */
 header {
     padding: 15px 15px;
     display: flex;
@@ -23,9 +28,9 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--first);
-    position: sticky;
   }
   
+  /* sets up the coloring of my name */
   header h1 {
     color: var(--second);
     background: var(--third);
@@ -34,6 +39,7 @@ header {
     line-height: 1;
   }
   
+  /* Makes the nav bar a flex container */
   nav{
     display: flex;
     flex-flow: row wrap;
@@ -61,10 +67,11 @@ header {
 
   /* This is the main photo that seperates header from the page */
   #background img {
-    display: inline-block;
+    display: flex;
+    flex: 0 0 100%;
+    width:100%;
     position: relative;
-    height: 400px;
-    width: 100%;
+    height: 500px;
   }
 
   /* This is the subtitle on the photo and its settings to make it work */
@@ -83,93 +90,251 @@ header {
   /* creates a flex box to hold the left and right sections */
   #information {
     display: flex;
+    flex: 0 0 100%;
     flex-flow: row wrap;
     color: var(--second);
-    width: 100%;
   }
 
   /* Left side of the page, the titles of the sections */
   #information h3 {
-    display:flex;
-    float: left;
+    display: flex;
+    flex: 0 0 20%;
     justify-content: flex-end;
     color:var(--third);
-    margin: 20px;
+    margin: 20px 20px 5px 20px;
     padding: 20px;
-    width: 20%;
     font-weight: normal;
-    background-color: yellow;
+    font-size: 30px;
   }
 
   /* Right side of the page, all of the pictures and text descriptions */
   .contents {
     display: flex;
+    flex: 0 0 80%;
     flex-flow: row wrap;
     margin: 1%;
     padding: 1%;
-    width: 70%;
     color: var(--second);
-    background-color: violet;
     border-left: 5px solid var(--third);
   }
 
-  .about p {
-    width:100%;
-    margin: 5px;
+  /* This is the about me section of the page */
+  /* This makes a flex container for about me section */
+  .about {
+    display: flex;
+    flex: 0 0 100%;
   }
 
-  .work figure {
-    width: 45%;
-    height: 200px;
+  /* makes the paragraphs responsive */
+  .about p {
+    display: flex;
+    flex: 0 0 85%;
     margin: 10px;
-    border: 5px solid var(--second);
+  }
+
+  /* This is the work section of the page */
+  /* This makes a flex container for the work section */
+  .work {
+    display: flex;
+    flex: 0 0 100%;
+  }
+
+  /* sets defaults for all photo/headings in the work section */
+  .work figure {
+    display: flex;
+    flex: 0 0 40%;
+    height: 200px;
+    margin: 3px;
+    border: 3px solid var(--second);
     position: relative;
   }
 
+  /* First work piece is bigger */
+  #bigphoto {
+    height: 500px;
+    flex: 0 0 81.5%;
+  }
+
+  /* Sets a bigger image */
+  #bigphoto a, #bigphoto img{
+    height: 500px;
+  }
+
+  /* Sets a bigger subtitle on the image */
+  #bigphoto h4 {
+    top: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /* sets up the sizing for a normal image */
   .work img {
     width: 100%;
     height: 200px;
   }
 
+  /* dims the photo to show you are over it */
+  .work img:hover {
+    fill-opacity: var(--first);
+    opacity: 60%;
+  }
+
+  /* sets the defaults for flex box on the subtitle */
   .work h4 {
     position: absolute;
     top: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 20%;
     width: 40%;
-    text-align: center;
     color:var(--first);
+    font-size:20px;
     background-color: var(--second);
     padding: 5px 5px;
   }
 
+  /* mini subtitle */
   .work span {
     letter-spacing: -1px;
     padding: 1px;
+    font-size: 15px;
   }
 
-  /* Puts space below contact section so it doesnt touch the bottom of the page */
+  /* This is the Contact Me section of the page */
+  /* creates a flex container for the contact me section */
   .contact {
-    margin-bottom: 20px;
+    display: flex;
+    flex: 0 0 100%;
   }
 
+  /* makes the list a flex box and removes stylings */
   .contact ul {
+    display: flex;
+    flex: 0 0 80%;
+    align-content: center;
     line-height: 3vw;
     list-style: none;
   }
 
+  /* adds spacing and color to the contact options */
   .contact a {
-    margin: 5px;
     color:var(--second);
+    margin-left: 20px;
   }
 
-
+  /* Changes appearance of contact options when they are hovered */
   .contact a:hover {
     text-decoration: none;
     color: var(--third);
   }
 
+  /* Changes the webpage to account for smaller webpages */
 @media screen and (max-width: 768px) {
+  /* Changes the header to be column based with the link instead of a single row */
   header  {
     flex-direction: column;
   }
+
+  /* makes the about me section a column */
+  .about {
+    flex-direction: column;
+  }
+
+  /* makes the paragraphs take up the entrie screen in width */
+  .about p {
+    flex: 0 0 100%;
+  }
+
+  /* makes the titles of the section centered and the correct size */
+  #information h3 {
+    flex: 0 0 95%;
+    justify-content: center;
+    border-bottom: 5px solid var(--third);
+  }
+
+  /* removes to previous border in each section */
+  .contents {
+    border-left: none;
+  }
+
+  /* makes the work section column based instead of rows */
+  .work {
+    flex-direction: column;
+  }
+
+  /* changes the sizing of the first photo to match the rest */
+  #bigphoto {
+    display: flex;
+    flex: 0 0 95%;
+    height: 200px;
+    justify-content: center;
+  }
+
+  /* makes the height of the first photo match the rest */
+  #bigphoto a, #bigphoto img {
+    height: 200px;
+  }
+
+  /* chagnes the size of the first photo's subtitle to match the rest */
+  #bigphoto h4 {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: 20%;
+    width: 40%;
+    text-align: center;
+    color:var(--first);
+    background-color: var(--second);
+    padding: 3px 3px;
+    font-size: 20px;
+  }
+
+  /* chagnes the amouont of photos per row to one */
+  .work figure{
+    display: flex;
+    flex: 0 0 95%;
+    justify-content: center;
+  }
+
+  /* changes where the subtitle appears */
+  .work h4 {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    height: 20%;
+    width: 40%;
+    text-align: center;
+    color:var(--first);
+    background-color: var(--second);
+    padding: 3px 3px;
+    font-size: 20px;
+  }
+
+  /* makes the subtitle smaller */
+  .work span {
+    font-size: 15px;
+    padding: 2px;
+  }
+
+  /* makes the contact section column based instead of a single row */
+  .contact {
+    flex-direction: column;
+  }
+
+  /* makes the list a flex container thats elements are a column */
+  .contact ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* centers text in the column */
+  .contact li {
+    margin: 5px;
+    text-align: center;
+  }
+
 }
