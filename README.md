@@ -9,4 +9,6 @@ The goal was to finish a basic portfolio that I can use in my future as I develo
 https://millerb7.github.io/MyPortfolio/
 
 Finished product:
-![Uploading portfolio.PNG…]()
+![portfolio](https://user-images.githubusercontent.com/4611321/123026351-0400e280-d3aa-11eb-82c9-d331f4654e13.PNG)
+
+
