@@ -9,4 +9,4 @@ The goal was to finish a basic portfolio that I can use in my future as I develo
 https://millerb7.github.io/MyPortfolio/
 
 Finished product:
-
+![Uploading portfolio.PNG…]()
